@@ -1,0 +1,55 @@
+{
+  "driver": {
+    "id": "DRV-2084",
+    "name": "Rakesh Kumar",
+    "hub": "Delhi NCR - Saket Micro Hub",
+    "role": "EV 3W Driver Partner",
+    "vehicle": "Euler HiLoad EV DL-07-LG-2084",
+    "phone": "+91 88825 40885",
+    "score": 96,
+    "status": "Ready for dispatch"
+  },
+  "shift": {
+    "date": "Today",
+    "window": "08:00 - 18:00",
+    "checkIn": "07:52",
+    "routeCode": "LG-DL-SKT-042",
+    "routeName": "Saket → Malviya Nagar → Green Park",
+    "battery": 84,
+    "rangeKm": 78,
+    "codDue": 1240,
+    "incentive": 480,
+    "sla": 98.4,
+    "dropsCompleted": 8,
+    "dropsTotal": 16
+  },
+  "stops": [
+    { "id": "STP-01", "sequence": 1, "customer": "Blinkit Dark Store", "type": "Pickup", "area": "Saket A2 Block", "eta": "08:15", "sla": "On time", "status": "Completed", "payment": "Prepaid", "packages": 12, "distanceKm": 0.8, "notes": "Warehouse security gate 2" },
+    { "id": "STP-02", "sequence": 2, "customer": "BigBasket B2B", "type": "Delivery", "area": "Malviya Nagar", "eta": "09:05", "sla": "On time", "status": "Completed", "payment": "COD ₹620", "packages": 4, "distanceKm": 3.4, "notes": "Collect receiving stamp" },
+    { "id": "STP-03", "sequence": 3, "customer": "Tata 1mg Pharmacy", "type": "Delivery", "area": "Hauz Khas", "eta": "09:55", "sla": "At risk", "status": "In progress", "payment": "Prepaid", "packages": 2, "distanceKm": 2.7, "notes": "Temperature-sensitive pouch" },
+    { "id": "STP-04", "sequence": 4, "customer": "Zomato Hyperpure", "type": "Pickup", "area": "Green Park", "eta": "10:40", "sla": "On time", "status": "Pending", "payment": "Prepaid", "packages": 7, "distanceKm": 3.2, "notes": "Scan all crates before departure" },
+    { "id": "STP-05", "sequence": 5, "customer": "Amazon Local", "type": "Delivery", "area": "Safdarjung Enclave", "eta": "11:30", "sla": "On time", "status": "Pending", "payment": "COD ₹620", "packages": 5, "distanceKm": 2.2, "notes": "OTP mandatory" },
+    { "id": "STP-06", "sequence": 6, "customer": "Swiggy Instamart", "type": "Delivery", "area": "Lado Sarai", "eta": "12:15", "sla": "On time", "status": "Pending", "payment": "Prepaid", "packages": 9, "distanceKm": 4.1, "notes": "Drop at receiving bay" }
+  ],
+  "documents": [
+    { "id": "DOC-1", "name": "Driving License", "number": "DL-042026-8192", "validUntil": "2028-04-30", "status": "Verified" },
+    { "id": "DOC-2", "name": "EV Safety Training", "number": "LG-EV-TRAIN-2084", "validUntil": "2026-12-31", "status": "Verified" },
+    { "id": "DOC-3", "name": "Vehicle RC", "number": "DL07-LG-2084", "validUntil": "2029-01-10", "status": "Verified" },
+    { "id": "DOC-4", "name": "Insurance", "number": "POL-LG-55421", "validUntil": "2026-08-18", "status": "Renewal due" }
+  ],
+  "alerts": [
+    { "id": "ALT-1", "title": "Battery-aware reroute", "body": "Charging queue at Green Park is high. Control tower recommends completing STP-03 before swap.", "priority": "High", "time": "6m", "read": false },
+    { "id": "ALT-2", "title": "COD settlement reminder", "body": "₹1,240 due for settlement before shift closure.", "priority": "Medium", "time": "32m", "read": false },
+    { "id": "ALT-3", "title": "SLA risk on pharmacy drop", "body": "Tata 1mg consignment should be delivered before 10:10 due to temperature handling SOP.", "priority": "High", "time": "1h", "read": false },
+    { "id": "ALT-4", "title": "Safety tip", "body": "Wear reflective jacket during evening loading and unloading at micro hubs.", "priority": "Info", "time": "2h", "read": true }
+  ],
+  "earnings": [
+    { "label": "Base shift", "value": 950 },
+    { "label": "On-time incentive", "value": 300 },
+    { "label": "EV green bonus", "value": 180 },
+    { "label": "COD settlement pending", "value": -1240 }
+  ],
+  "supportTopics": [
+    "Vehicle breakdown", "Battery swap", "Customer not reachable", "POD rejected", "COD mismatch", "Leave request", "Hub escalation"
+  ]
+}
